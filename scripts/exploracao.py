@@ -34,6 +34,7 @@ def contact_dataframe(dataframe_csv: pd.DataFrame,dataframe_json: pd.DataFrame):
 
 def dataframe_to_csv(dataframe: pd.DataFrame,path:str):
      dataframe.to_csv(path)
+     
 
 
 if __name__ == "__main__":
@@ -44,4 +45,4 @@ if __name__ == "__main__":
      data_frame_csv = drop_column(data_frame_csv,"Data da Venda")
      data_frame_csv = rename_column(data_frame_csv)
      new_data_frame_concat = contact_dataframe(data_frame_json,data_frame_csv)
-     dataframe_to_csv(new_data_frame_concat, "../data_processed/dados_unificados.csv")  
+     dataframe_to_csv(new_data_frame_concat,"../data_processed/dados_lojas_juntas.csv")
